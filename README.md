@@ -191,8 +191,8 @@ CREATE TABLE applications (
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/job-application-tracker.git
-cd job-application-tracker
+git clone https://github.com/michaelflorentino4444/Git-Ghosted.git
+cd Git-Ghosted
 ```
 
 ### 2. Install All Dependencies
