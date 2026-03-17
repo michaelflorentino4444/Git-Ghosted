@@ -212,7 +212,7 @@ npm install --prefix client      # frontend
 ```bash
 psql -U postgres
 CREATE DATABASE job_tracker;
-\c job_tracker
+\c git_ghosted
 \i server/db/schema.sql
 ```
 
