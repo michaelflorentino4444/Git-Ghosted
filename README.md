@@ -211,7 +211,7 @@ npm install --prefix client      # frontend
 ### 3. Set Up the Database
 ```bash
 psql -U postgres
-CREATE DATABASE job_tracker;
+CREATE DATABASE git_ghosted;
 \c git_ghosted
 \i server/db/schema.sql
 ```
