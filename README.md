@@ -56,7 +56,7 @@ The Job Application Tracker is a personal CRM (Customer Relationship Management)
 This project is structured as a **monorepo** — both the frontend and backend live in a single Git repository, with a root-level `package.json` that coordinates running them together.
 
 ```
-job-application-tracker/          ← single Git repo
+Git-Ghosted/                      ← single Git repo
 ├── client/                       # React frontend
 │   ├── package.json
 │   ├── public/
