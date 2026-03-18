@@ -2,10 +2,16 @@ import db from "#db/client";
 import { faker } from "@faker-js/faker";
 
 import { createUser } from "./queries/users.js";
-import { createApplication } from "./queries/applications.js";
+import {
+  createApplication,
+  updateApplicationById,
+  getApplicationById,
+} from "./queries/applications.js";
 
 await db.connect();
 await seed();
+await getApplicationById(...12);
+await updateApplicationById(12, { status: "interview" });
 await db.end();
 console.log("🌱 Database seeded.");
 
