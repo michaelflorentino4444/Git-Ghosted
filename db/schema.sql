@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS applications;
+DROP TABLE IF EXISTS applications CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
 -- Users table
 CREATE TABLE users (
