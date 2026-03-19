@@ -6,7 +6,7 @@ export async function createApplication(appObj) {
     (user_id, company, role, status, job_url, date_applied, notes, contact_name, contact_email)
   VALUES
     ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-  RETURNING *
+  RETURNING *;
   `;
   const {
     rows: [application],

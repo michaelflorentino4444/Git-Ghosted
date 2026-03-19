@@ -44,6 +44,15 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+router.get("/user/:userId", async (req, res, next) => {
+  try {
+    const applications = await getApplicationByUserId(req.params.userId);
+    res.json({ applications });
+  } catch (err) {
+    next(err);
+  }
+});
+
 router.put("/:id", async (req, res, next) => {
   try {
     const application = await updateApplicationById(req.params.id, req.body);
@@ -63,15 +72,6 @@ router.delete("/:id", async (req, res, next) => {
       return res.status(404).json({ error: "Application not found" });
     }
     res.json({ application });
-  } catch (err) {
-    next(err);
-  }
-});
-
-router.get("/user/:userId", async (req, res, next) => {
-  try {
-    const applications = await getApplicationByUserId(req.params.userId);
-    res.json({ applications });
   } catch (err) {
     next(err);
   }
