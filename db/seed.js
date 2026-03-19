@@ -2,16 +2,10 @@ import db from "#db/client";
 import { faker } from "@faker-js/faker";
 
 import { createUser } from "./queries/users.js";
-import {
-  createApplication,
-  updateApplicationById,
-  getApplicationById,
-} from "./queries/applications.js";
+import { createApplication } from "./queries/applications.js";
 
 await db.connect();
 await seed();
-await getApplicationById(...12);
-await updateApplicationById(12, { status: "interview" });
 await db.end();
 console.log("🌱 Database seeded.");
 
@@ -21,7 +15,6 @@ async function seed() {
     const users = [];
 
     for (let i = 0; i < 3; i++) {
-      const name = faker.person.fullName();
       const email = faker.internet.email();
       const password = faker.internet.password();
 
